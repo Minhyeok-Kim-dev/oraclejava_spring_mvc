@@ -10,7 +10,7 @@
 			<a href="<c:url value="/account/register"/>">등록</a>
 		</c:if>
 		<c:if test="${!empty sessionScope.loginUser}">
-			${sessionScope.loginUser} 님 환영합니다.
+			${sessionScope.loginUser.memberid} 님 환영합니다.
 			<a href="<c:url value="/account/logout"/>">로그아웃</a>
 		</c:if>
 	</div>
@@ -18,7 +18,7 @@
 <div id=menu>
 	<div>
 		<ul>
-			<li><a href="">게시판</a></li>
+			<li><a href="<c:url value="/bbs/list"/>">게시판</a></li>
 		</ul>
 	</div>
 </div>

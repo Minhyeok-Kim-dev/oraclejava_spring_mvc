@@ -1,17 +1,17 @@
 package com.oraclejava.mvc.controller;
 
 public class MemberForm {
-	private String memberId;
+	private String memberid;
 	private String passwd;
 	private String passwd2;
 	private String email;
-	private String userType;
+	private String usertype;
 	
-	public String getMemberId() {
-		return memberId;
+	public String getMemberid() {
+		return memberid;
 	}
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	public void setMemberid(String memberid) {
+		this.memberid = memberid;
 	}
 	public String getPasswd() {
 		return passwd;
@@ -31,10 +31,12 @@ public class MemberForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUserType() {
-		return userType;
+	public String getUsertype() {
+		return usertype;
 	}
-	public void setUserType(String userType) {
-		this.userType = userType;
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
 	}
+	
+	
 }

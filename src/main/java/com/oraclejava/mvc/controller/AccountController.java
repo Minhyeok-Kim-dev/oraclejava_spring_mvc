@@ -25,6 +25,7 @@ public class AccountController {
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login(Map<String, Object> model) {
 		model.put("memberForm", new MemberForm());
+		
 		return "account/login";
 	}
 	
@@ -32,9 +33,14 @@ public class AccountController {
 	public String login(Map<String, Object> model,
 			HttpSession session,MemberForm form) {
 		
-		if(form.getMemberId().equals("oraclejava") && form.getPasswd().equals("1"))
+		String memberId = form.getMemberid();
+		String passwd = form.getPasswd();
+		
+		Member member = memberService.selectMemberByIdAndPassword(memberId, passwd);
+		
+		if(member != null)
 		{
-			session.setAttribute("loginUser", form.getMemberId());
+			session.setAttribute("loginUser", member);
 			return "redirect:/";
 		} else {
 			model.put("fail", "login fail");
@@ -57,10 +63,10 @@ public class AccountController {
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String registMember(MemberForm form) throws Exception {
 		Member member = new Member();
-		member.setMemberId(form.getMemberId());
+		member.setMemberid(form.getMemberid());
 		member.setPasswd(form.getPasswd());
 		member.setEmail(form.getEmail());
-		member.setUserType("user");
+		member.setUsertype("user");
 		member.setActive("1");
 		
 		memberService.insertMember(member);
