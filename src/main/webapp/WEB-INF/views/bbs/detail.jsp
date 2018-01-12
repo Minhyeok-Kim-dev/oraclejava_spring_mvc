@@ -51,7 +51,7 @@
 							<th>첨부자료</th>
 							<td>
 								<c:forEach var="file" items="${bbsform.fileItems}">
-									<a href="<c:url value="/bbs/Download?bbsFileNo=${file.bbsfileno}" />">
+									<a href="<c:url value="/bbs/download/${file.bbsfileno}" />">
 										${file.userfilename}
 									</a> &nbsp; [${file.downloadcount}]
 								</c:forEach>	

@@ -19,6 +19,8 @@
 	<div>
 		<ul>
 			<li><a href="<c:url value="/bbs/list"/>">게시판</a></li>
+			<li><a href="<c:url value="/rbbs/"/>">rest게시판</a></li>
+			<li><a href="<c:url value="/chat/"/>">실시간chat</a></li>
 		</ul>
 	</div>
 </div>

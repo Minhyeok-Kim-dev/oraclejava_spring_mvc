@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oraclejava.mvc.mapper.RbbsMapper">
+	<select id="getItems" resultType="Rbbs">
+		SELECT * FROM rbbs ORDER BY regdate DESC
+	</select>
+
+	<insert id="write" parameterType="Rbbs">
+		<selectKey keyProperty="bbsno" resultType="int" order="BEFORE">
+			select rbbs_seq.nextval from dual
+		</selectKey>
+		INSERT INTO rbbs(bbsno, name, body) 
+		VALUES (#{bbsno}, #{name}, #{body})
+	</insert>
+</mapper>
