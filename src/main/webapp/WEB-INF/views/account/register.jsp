@@ -26,7 +26,7 @@
 						<tr>
 							<th>아이디(id)</th>
 							<td>
-								<form:input path="memberId" style="width: 280px" />
+								<form:input path="memberid" style="width: 280px" />
 							</td>
 						</tr>
 						<tr>

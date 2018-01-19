@@ -11,7 +11,7 @@ import com.oraclejava.mvc.model.BbsFile;
 
 public interface BbsMapper {
 	// Bbs
-	@Select("SELECT * FROM bbs")
+	@Select("SELECT * FROM bbs ORDER BY bbsno DESC")
 	List<Bbs> selectBbs();
 	
 	@Select("SELECT * FROM bbs WHERE BBSNO = #{bbsno}")

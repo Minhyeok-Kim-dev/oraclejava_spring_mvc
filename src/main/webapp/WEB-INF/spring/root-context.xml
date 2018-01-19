@@ -14,8 +14,8 @@
 		class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:oraclejava" />
-		<property name="username" value="hr" />
-		<property name="password" value="hr" />
+		<property name="username" value="system" />
+		<property name="password" value="1234" />
 		<property name="defaultAutoCommit" value="false"></property>
 	</bean>
 	 

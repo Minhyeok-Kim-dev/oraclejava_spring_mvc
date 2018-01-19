@@ -4,6 +4,6 @@
 <mapper namespace="com.oraclejava.mvc.mapper.MemberMapper">
 	<insert id="insertMember" parameterType="Member">
 		INSERT INTO members(memberid, passwd, email, usertype)
-		VALUES (#{memberId}, #{passwd}, #{email}, #{userType})
+		VALUES (#{memberid}, #{passwd}, #{email}, #{usertype})
 	</insert>
 </mapper>

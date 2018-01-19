@@ -53,7 +53,7 @@
 								<c:forEach var="file" items="${bbsform.fileItems}">
 									<a href="<c:url value="/bbs/download/${file.bbsfileno}" />">
 										${file.userfilename}
-									</a> &nbsp; [${file.downloadcount}]
+									</a> <%-- &nbsp; [${file.downloadcount}] --%>
 								</c:forEach>	
 							</td>
 						</tr>
@@ -65,9 +65,9 @@
 						</tr>
 					</table>
 					<div class="buttons">
-						<input type="submit" value="update" style="height:25px" />
+						<!-- <input type="submit" value="update" style="height:25px" /> -->
 						<input type="button" value="cancel" style="height:25px" 
-							onclick="location.href='<c:url value="/bbs/List"/>'" />
+							onclick="location.href='<c:url value="/bbs/list"/>'" />
 					</div>
 				</div>
 			</div>

@@ -78,7 +78,7 @@
 		<div id="content">
 			<h2>실시간 chat</h2>
 			<div class="form">
-				<button id="enterRoom">채팅방 입장</button>
+				<button id="enterRoom">채팅방 입장</button><br/><br/>
 				이름 : <br/>
 				<input type="text" id="name" name="name" 
 					value="${sessionScope.loginUser.memberid}" /><br/><br/>
